@@ -1,0 +1,34 @@
+body {
+    background-color: #151825; /* Dark background */
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.code {
+    color: #f0f0f0; /* Bright text for contrast */ 
+    font-size: 8em;
+    margin-bottom: 0;
+}
+
+.message h2 {
+    color: #999;  /* Slightly toned-down text */
+    margin-bottom: 15px;
+}
+
+.return {
+    background-color: #3882f6; /* Consider a slightly darker blue for dark mode */
+    text-decoration: none;
+    color: #fff; 
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+
