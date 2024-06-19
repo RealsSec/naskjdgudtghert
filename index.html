@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dark Theme Shop</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Include jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Include SellAuth API -->
-    <script src="https://sellauth.com/assets/js/sellauth-api.js"></script>
 </head>
 <body>
     <div class="container">
@@ -39,31 +35,8 @@
         </div>
     </div>
 
-    <script>
-        $(document).ready(function() {
-            $('#purchaseButton').click(function() {
-                var selectedVariant = $('#variant').val();
-                var selectedCoupon = $('#coupon').val();
-                var selectedEmail = $('#email').val();
-                var selectedPaymentMethod = $('#paymentMethod').val();
-                var selectedCount = $('#quantity').val();
-
-                var invoiceData = {
-                    product: 32654,  // The product ID for "Unlock All"
-                    variant: selectedVariant,
-                    coupon: selectedCoupon,
-                    gateway: selectedPaymentMethod,
-                    email: selectedEmail,
-                    amount: selectedCount
-                };
-
-                sellauthApi.createInvoice(invoiceData, function(response) {
-                    window.location.href = response.url;
-                }, function(error) {
-                    $('#errorAlert').text(error).show();
-                });
-            });
-        });
-    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://sellauth.com/assets/js/sellauth-api.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
